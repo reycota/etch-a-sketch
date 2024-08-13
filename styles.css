@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    height: 960px;
+    border: 1px solid #000;
+}
+
+.grid-item {
+    flex: 1 0 calc(100%/16); /*adjust this to 16 for 16x16 grid */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    height: calc(100% / 16); /* adjust height to match width for square grid items */
+}
+
