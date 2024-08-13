@@ -25,3 +25,16 @@ document.getElementById(`resize-button`).addEventListener(`click`, function() {
     if (size > 100) size = 100; // Limit to 100
     createGrid(size);
 });
+
+function getRandomColor(){
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+document.getElementById(`container`).addEventListener(`mouseover` , function(e) {
+    if (e.target.classList.contains(`grid-item`)) {
+        e.target.style.backgroundColor = getRandomColor();
+    }
+});
